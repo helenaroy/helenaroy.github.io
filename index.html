@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Helena Roy</title>
+<meta name="description" content="Helena Roy — an economist studying how innovation changes the way health decisions get made.">
+<link rel="canonical" href="https://www.helenaroy.com/">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:title" content="Helena Roy">
+<meta property="og:description" content="Helena Roy — an economist studying how innovation changes the way health decisions get made.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.helenaroy.com/">
+<meta property="og:image" content="https://www.helenaroy.com/images/tile.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<!-- Fonts: Google Fonts (the only third-party resource on this page). -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!--
+  PRIVACY ALTERNATIVE (max privacy, no third-party requests):
+  To drop Google Fonts entirely, self-host the three families and remove the
+  three font <link> tags above. Place the .woff2 files in /fonts and uncomment:
+
+  <style>
+    @font-face{font-family:'Spectral';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/spectral-500.woff2') format('woff2');}
+    @font-face{font-family:'Spectral';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/spectral-400.woff2') format('woff2');}
+    @font-face{font-family:'Spectral';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/spectral-400-italic.woff2') format('woff2');}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/inter-400.woff2') format('woff2');}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/inter-500.woff2') format('woff2');}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/inter-600.woff2') format('woff2');}
+    @font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/ibm-plex-mono-400.woff2') format('woff2');}
+    @font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/ibm-plex-mono-500.woff2') format('woff2');}
+  </style>
+-->
+
+<!--
+  DEPLOYMENT NOTES:
+  - Strip EXIF metadata from images/tile.png before committing
+    (e.g. `exiftool -all= images/tile.png`).
+  - Enable "Enforce HTTPS" in the GitHub Pages settings for this repo.
+-->
+
+<style>
+:root{
+  --bg:#FFFFFF; --text:#1A1A1A; --muted:#6B6B70; --accent:#1D4ED8; --hairline:#ECECEC;
+  --font-body:'Inter',system-ui,sans-serif;
+  --font-head:'Spectral',Georgia,serif;
+  --font-mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box;}
+body{margin:0; background:var(--bg); color:var(--text); font-family:var(--font-body); line-height:1.62; -webkit-font-smoothing:antialiased;}
+
+.wrap{max-width:680px; margin:0 auto; padding:56px 28px 110px;}
+
+.intro::after{content:""; display:block; clear:both;}
+.intro-photo{float:right; width:235px; height:235px; border-radius:50%; object-fit:cover;
+  margin:6px 0 16px 32px; shape-outside:circle(50%); shape-margin:16px;}
+
+.name{font-family:var(--font-head); font-weight:500; font-size:48px; line-height:1.04; letter-spacing:-0.01em; margin:0 0 14px;}
+
+nav{font-family:var(--font-mono); font-size:12.5px; text-transform:uppercase; letter-spacing:0.09em; margin:0 0 32px;}
+nav a{color:var(--muted); text-decoration:none; margin-right:16px; border:0;}
+nav a:hover{color:var(--accent);}
+
+p{font-size:17px; margin:0 0 18px;}
+a{color:var(--text); text-decoration:none; border-bottom:1px solid var(--accent);}
+a:hover{color:var(--accent);}
+.muted{color:var(--muted);}
+
+a:focus-visible, nav a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px;}
+
+section{margin-top:54px;}
+h2{font-family:var(--font-head); font-weight:500; font-size:27px; margin:0 0 4px;}
+.rule{height:1px; background:var(--hairline); margin:9px 0 22px;}
+
+.grouplabel{font-family:var(--font-mono); font-weight:500; font-size:13.5px; text-transform:uppercase; letter-spacing:0.1em; color:var(--accent); margin:26px 0 14px;}
+.req{font-family:var(--font-body); font-weight:400; font-size:13px; color:var(--muted); font-style:italic; text-transform:none; letter-spacing:0;}
+
+.paper{margin:0 0 18px;}
+.paper .title{font-size:17px; font-weight:500;}
+.paper .auth{font-size:15.5px; color:var(--muted);}
+.paper .venue{font-size:14px; color:var(--muted); font-style:italic;}
+
+@media (max-width:720px){
+  .intro-photo{float:none; shape-outside:none; margin:0 0 18px; width:150px; height:150px;}
+  .wrap{padding:44px 22px 84px;} .name{font-size:38px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important; transition:none !important; scroll-behavior:auto !important;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="intro">
+    <img class="intro-photo" src="images/tile.png" alt="Helena Roy" width="235" height="235">
+    <h1 class="name">Helena Roy</h1>
+    <nav aria-label="Sections">
+      <a href="#research">Research</a><a href="#other">Other</a><a href="#contact">Contact</a>
+    </nav>
+    <p>I'm an economist studying how innovation — technological, institutional, and informational — changes the way health decisions get made.</p>
+    <p>My goal is to understand the optimal design and deployment of new information technologies in healthcare — accounting for variation in behaviour — so people can make well-informed choices about their health, and improve the outcomes that follow. In current research, I consider how people seek out health information online, and how diagnostic innovation happens, among other topics. I work on these questions as a postdoctoral fellow in Professor Ariel Stern's group on digital health, economics, and policy, at the Hasso Plattner Institute.</p>
+    <p>Alongside my research, I actively work with healthtech start-ups, and am a (non-resident) fellow at the Centre for British Progress. I hold a PhD in Economics from Stanford, an MPhil from Oxford, and a BA from Cambridge. I'm from the UK and Aotearoa New Zealand, and enjoy outdoor activities, reading, and <a href="https://www.google.com/maps/d/viewer?mid=16qEsWZgYKhC7n0gYi-VZZg-cSFdMLp4" target="_blank" rel="noopener noreferrer">flat whites</a>.</p>
+  </header>
+
+  <main>
+    <section id="research" aria-labelledby="research-h">
+      <h2 id="research-h">Research</h2>
+      <div class="rule"></div>
+
+      <div class="grouplabel">Work in progress</div>
+      <div class="paper"><div class="title">Measuring Diagnostic Innovation</div></div>
+      <div class="paper"><div class="title">Mapping Health Information in Online Communities</div></div>
+      <div class="paper"><div class="title">How Patients Choose Physicians Online</div><div class="auth">with Helen Kissel and Tamri Matiashvili</div></div>
+
+      <div class="grouplabel">Working papers <span class="req">— drafts available upon request</span></div>
+      <div class="paper"><div class="title">Selection into Healthcare Delivery Innovations: Birth Centers and Maternal Health</div><div class="auth">with Helen Kissel, Ambar La Forgia, Petra Persson, and Maya Rossin-Slater</div><div class="venue">Presented at ASHEcon 2025</div></div>
+      <div class="paper"><div class="title">Understanding Variation in Cesarean Section Use: Supply-Side Drivers and Maternal Health Effects</div><div class="auth">with Helen Kissel</div><div class="venue">Presented at ASHEcon 2025</div></div>
+      <div class="paper"><div class="title">Physician Training and Patient Heterogeneity: Evidence from Physician Residencies</div><div class="auth">with Helen Kissel</div></div>
+    </section>
+
+    <section id="other" aria-labelledby="other-h">
+      <h2 id="other-h">Other</h2>
+      <div class="rule"></div>
+      <p>I have written various briefings exploring how policy can encourage economic growth through innovation. One public example, on <a href="https://britishprogress.org/uk-day-one/designing-an-ai-bond-for-growth-and-shared-prosper" target="_blank" rel="noopener noreferrer">sovereign AI bonds</a>, was published by UK Day One and presented as part of <a href="https://www.anthropic.com/research/economic-policy-responses" target="_blank" rel="noopener noreferrer">LSE and Anthropic's Economic Symposia</a> in 2025.</p>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact</h2>
+      <div class="rule"></div>
+      <p>You can reach me by email <a id="emaillink" href="#">here</a>.</p>
+    </section>
+  </main>
+</div>
+
+<script>
+  // Email obfuscation: assemble the mailto on load so the address never
+  // appears in the static page source.
+  document.addEventListener('DOMContentLoaded', function(){
+    var user = 'helenaaroy', domain = 'gmail.com';
+    var el = document.getElementById('emaillink');
+    if (el) { el.setAttribute('href', 'mailto:' + user + '@' + domain); }
+  });
+</script>
+</body>
+</html>
