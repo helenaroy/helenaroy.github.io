@@ -73,6 +73,7 @@ p{font-size:17px; margin:0 0 18px;}
 a{color:var(--text); text-decoration:none; border-bottom:1px solid var(--accent);}
 a:hover{color:var(--accent);}
 .muted{color:var(--muted);}
+strong,b{font-weight:600;}
 
 a:focus-visible, nav a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px;}
 
@@ -87,6 +88,22 @@ h2{font-family:var(--font-head); font-weight:500; font-size:27px; margin:0 0 4px
 .paper .title{font-size:17px; font-weight:500;}
 .paper .auth{font-size:15.5px; color:var(--muted);}
 .paper .venue{font-size:14px; color:var(--muted); font-style:italic;}
+.paper .auth strong{color:var(--text);}
+
+/* Abstract+ toggles: native <details>/<summary>, so they need no JavaScript
+   and are keyboard- and screen-reader-accessible by default. */
+.abstract{margin:4px 0 0;}
+.abstract summary{display:inline-block; cursor:pointer; list-style:none; font-size:14px; font-weight:500; color:var(--accent); border-bottom:1px solid transparent; -webkit-user-select:none; user-select:none;}
+.abstract summary::-webkit-details-marker{display:none;}
+.abstract summary::after{content:"+"; content:"+" / "";}
+.abstract[open] summary::after{content:"\2212"; content:"\2212" / "";}
+.abstract summary:hover{border-bottom-color:var(--accent);}
+.abstract summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px;}
+.abstract-text{margin:10px 0 8px; padding-left:16px; border-left:2px solid var(--hairline);}
+.abstract-text p{font-size:15px; line-height:1.6; margin:0 0 10px;}
+.abstract-text p:last-child{margin-bottom:0;}
+.abstract[open] .abstract-text{animation:abstract-in .2s ease-out;}
+@keyframes abstract-in{from{opacity:0; transform:translateY(-4px);} to{opacity:1; transform:none;}}
 
 @media (max-width:720px){
   .intro-photo{float:none; shape-outside:none; margin:0 0 18px; width:150px; height:150px;}
@@ -115,14 +132,33 @@ h2{font-family:var(--font-head); font-weight:500; font-size:27px; margin:0 0 4px
       <h2 id="research-h">Research</h2>
       <div class="rule"></div>
 
+      <!-- Abstract+ toggle: to add one to another paper, paste this just before that paper's final </div>
+           (the word inside <summary> is the button label, e.g. Abstract or Summary):
+           <details class="abstract"><summary>Abstract</summary><div class="abstract-text"><p>Abstract text here.</p></div></details> -->
       <div class="grouplabel">Work in progress</div>
-      <div class="paper"><div class="title">Measuring Diagnostic Innovation</div></div>
+      <div class="paper"><div class="title">Measuring Diagnostic Innovation in Artificial Intelligence-Enabled Medical Devices</div></div>
       <div class="paper"><div class="title">Mapping Health Information in Online Communities</div></div>
-      <div class="paper"><div class="title">How Patients Choose Physicians Online</div><div class="auth">with Helen Kissel and Tamri Matiashvili</div></div>
+      <div class="paper"><div class="title">Gender, Information, and Online Search for Physicians</div><div class="auth">with Helen Kissel and Tamri Matiashvili</div><div class="venue">Presented at Stanford SITE 2026</div>
+        <details class="abstract"><summary>Abstract</summary><div class="abstract-text">
+          <p>Patients increasingly select physicians through online “find a doctor” tools, which display information such as physician gender and patient ratings, rather than relying on physician referral, word-of-mouth, or soonest availability. Medical literature documents female patients' stated preferences for female physicians in certain specialties, but whether and how patients act on these preferences when given the tools to do so remains an open question. Using a randomized hypothetical choice experiment that mirrors the information presented in typical online physician-search platforms, we find that female patients have strong preferences for gender-concordant physicians in gender-sensitive specialties. Women are willing to wait 1.6 additional weeks for a female urologist and 2.2 additional weeks for a female psychiatrist, two specialties with more gender-sensitive components, but show no statistically significant concordance preference in orthopedics, a more gender-neutral specialty. Men exhibit no significant concordance preference in any specialty. Among women, the gender concordance preference is stronger among those who report prior negative healthcare experiences due to gender. We complement these experimental findings with evidence from Medicare claims data on bladder cancer patients. We find that female patients are more likely than male patients to see female urologists, and women who match with a female urologist wait longer than women who match with a male urologist. Male patients exhibit no corresponding wait-time difference by physician gender. These findings suggest that patient preferences over physician characteristics, and patients' growing capacity to act on those preferences, mean that the availability of female healthcare providers may affect patterns of health-seeking behavior such as provider choice and timing of care.</p>
+        </div></details>
+      </div>
+      <div class="paper"><div class="title">Healthcare Delivery Innovation: The Impact of Birth Centers on Maternal and Infant Health</div><div class="auth">with Helen Kissel, Ambar La Forgia, Petra Persson, and Maya Rossin-Slater</div><div class="venue">Presented at ASHEcon 2025</div></div>
 
       <div class="grouplabel">Working papers <span class="req">— drafts available upon request</span></div>
-      <div class="paper"><div class="title">Understanding Variation in Cesarean Section Use: Supply-Side Drivers and Maternal Health Effects</div><div class="auth">with Helen Kissel</div><div class="venue">Presented at ASHEcon 2025</div></div>
-      <div class="paper"><div class="title">Physician Training and Patient Heterogeneity: Evidence from Physician Residencies</div><div class="auth">with Helen Kissel</div></div>
+      <div class="paper"><div class="title">Understanding Variation in Cesarean Section Use: Supply-Side Drivers and Maternal Health Effects</div><div class="auth">with Helen Kissel</div><div class="venue">Presented at ASHEcon 2025</div>
+        <details class="abstract"><summary>Abstract</summary><div class="abstract-text">
+          <p>We estimate the causes and consequences of regional variation in healthcare utilization in the setting of Cesarean sections (C-sections), the most common inpatient surgery in the United States. C-section rates differ up to 10-fold across hospitals, with substantial variation even for clinically similar patients. Using nationwide Medicaid administrative claims data, we leverage physician mobility across hospitals to disentangle the role of physician practice style from hospital environment. We find that differences in physician practice style can explain approximately 20% of the across-hospital differences in C-section rates. This variation in practice style has meaningful consequences for patient health: low-risk patients quasi-randomly assigned to more C-section-intensive physicians are 28% more likely to deliver via unplanned C-section, leading to higher rates of maternal and infant health complications and worse maternal mental health postpartum. Our findings highlight physician practice style as an important driver of variation in obstetric care with direct consequences for maternal and infant health.</p>
+        </div></details>
+      </div>
+      <div class="paper"><div class="title">Physician Training and Patient Heterogeneity: Evidence from Residency</div><div class="auth">with Helen Kissel</div></div>
+
+      <div class="grouplabel">Published articles</div>
+      <div class="paper"><div class="title"><a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)02156-7/fulltext" target="_blank" rel="noopener noreferrer">Triple cardiovascular disease detection with an artificial intelligence-enabled stethoscope (TRICORDER) in the UK: a cluster-randomised controlled implementation trial</a></div><div class="auth">Mihir A Kelshiker, Patrik Bächtiger, Camille F Petri, Saloni Nakhare, Josephine Mansell, Karanjot Chhatwal, Abdullah Alrumayh, Jahed Zaman, Moulesh Shah, Holly Young, <strong>Helena Roy</strong>, Melanie T Almonte, Céire Costelloe, Yasmin Razak, Azeem Majeed, James P Howard, Carys Barton, Daniel B Kramer, Carla M Plymen, and Nicholas S Peters</div><div class="venue">The Lancet, 2026, 407(10529): 704–715</div>
+        <details class="abstract"><summary>Summary</summary><div class="abstract-text">
+          <p>Early detection of cardiovascular disease is a global public health priority. Artificial intelligence (AI)-enabled stethoscopes offer robust performance characteristics in point-of-care detection of heart failure, atrial fibrillation, and valvular heart disease (VHD). We conducted a pragmatic, cluster-randomised controlled implementation trial to determine the real-world effect and implementation challenges of AI-stethoscopes. We found that implementation of an AI stethoscope in routine primary care did not significantly increase detection of heart failure or increase community-based diagnosis after 12 months of implementation. However, AI stethoscope use was independently associated with significantly higher detection rates of heart failure, as well as atrial fibrillation and VHD. This randomised controlled implementation trial establishes a pragmatic design with randomisation that generates real-world data essential for understanding and overcoming the barriers to implementation of innovation in health care.</p>
+        </div></details>
+      </div>
     </section>
 
     <section id="other" aria-labelledby="other-h">
